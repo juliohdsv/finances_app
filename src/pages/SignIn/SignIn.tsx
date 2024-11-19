@@ -1,4 +1,5 @@
 import { Platform } from "react-native"
+import { useNavigation } from "@react-navigation/native"
 
 import { 
   Background, Container, InputArea, 
@@ -7,10 +8,13 @@ import {
 } from "./style"
 
 export default function SignIn(){
+  const navigation = useNavigation();
+
   return(
     <Background>
       <Container
-        behavior={Platform.OS === "ios" ? "padding": ""}
+        behavior={Platform.OS === 'ios' ? 'padding': ''} //Funciona para IOS, asssim o teclado não cobre os components na hora de digitar. No android é automatico por padrão
+        enabled 
       >
         <Icon
           source={require("../../../assets/coins.png")}
@@ -34,7 +38,7 @@ export default function SignIn(){
           </SubmitText>
         </SubmitButton>
 
-        <Link>
+        <Link onPress={ ()=> navigation.navigate('SignUp') }>
           <LinkText>Criar uma conta!</LinkText>
         </Link>
 

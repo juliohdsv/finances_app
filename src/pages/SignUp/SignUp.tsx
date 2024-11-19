@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native"
+import { View, Text } from "react-native"
 
 export default function SignUp(){
   return(
@@ -7,12 +7,3 @@ export default function SignUp(){
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  container:{
-
-  },
-  title:{
-
-  },
-})
