@@ -3,7 +3,7 @@ import { theme } from "../../theme/theme";
 
 export const Background = styled.View`
   flex: 1;
-  background-color: ${theme.colors.gray[800]};
+  background-color: ${theme.colors.black};
 `;
 export const Container = styled.KeyboardAvoidingView`
   flex:1;
@@ -37,7 +37,6 @@ export const SubmitButton = styled.TouchableOpacity`
 
 export const SubmitText = styled.Text`
   font-size:20px;
-  font-weight:bold;
   color: ${theme.colors.black};
 `;
 

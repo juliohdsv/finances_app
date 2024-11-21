@@ -1,3 +1,4 @@
+import React from "react";
 import { Platform } from "react-native"
 import { useNavigation } from "@react-navigation/native"
 
@@ -7,13 +8,15 @@ import {
   Link, LinkText
 } from "./style"
 
+
 export default function SignIn(){
+
   const navigation = useNavigation();
 
   return(
     <Background>
       <Container
-        behavior={Platform.OS === 'ios' ? 'padding': ''} //Funciona para IOS, asssim o teclado não cobre os components na hora de digitar. No android é automatico por padrão
+        behavior={Platform.OS === 'ios' ? 'padding': undefined} //Funciona para IOS, asssim o teclado não cobre os components na hora de digitar. No android é automatico por padrão
         enabled 
       >
         <Icon
@@ -38,7 +41,7 @@ export default function SignIn(){
           </SubmitText>
         </SubmitButton>
 
-        <Link onPress={ ()=> navigation.navigate('SignUp') }>
+        <Link onPress={ ()=> navigation.navigate('Cadastro') }>
           <LinkText>Criar uma conta!</LinkText>
         </Link>
 
